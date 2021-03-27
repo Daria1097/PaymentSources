@@ -6,7 +6,7 @@ import (
 )
 
 
-func ExemplePaymentSourse() {
+func ExemplePaymentSources() {
 	fmt.Println(PaymentSources( []types.Card{
 		{
 			
@@ -39,8 +39,7 @@ fmt.Println(PaymentSources( []types.Card{
 	}))
 	
    //Output: 
-   //100000
-   //300000
-   //0
-   //0
+   //01
+   //04
+   
 }
