@@ -8,19 +8,16 @@ import (
 // PaymentSourse  предоставляет выбор карт для оплаты 
 // карты с отрицательным балансом и  заблокированные карты игнорируются 
 func PaymentSources(cards []types.Card) []types.PaymentSource{
-	var sources []types.PaymentSource
-		
+	
 	for _, card := range cards  {
 	if  card.Balance <= 0{
 		continue
 	}
 	  if !card.Active{
 		  continue
-  }
-  
-  	sources = sources 
-	  
-  }	
-  return  sources
+  	} 
+	}	
+   	var sources []types.PaymentSource
+  	return  sources
 
 }  
