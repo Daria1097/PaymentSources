@@ -14,7 +14,8 @@ func PaymentSources(cards []types.Card) [] types.PaymentSource {
 		continue
  
 	}
-	payments = append(payments,types.PaymentSource{"card","9074 9934 8645 7642",1_000_00})
+	payments = append(payments,types.PaymentSource{"card","01" , 1_000_00})
+	payments = append(payments, types.PaymentSource{"card","02",-1_000_00})
  	}
 
     return payments
