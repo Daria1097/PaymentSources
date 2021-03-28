@@ -6,40 +6,32 @@ import (
 )
 
 
-func ExemplePaymentSourse() {
-	fmt.Println(PaymentSources( []types.Card{
-		{
-			Balance: 1_000_00,
-			Active: true,
- 		},
-	}))
-	fmt.Println(PaymentSources( []types.Card{
+func ExemplePaymentSources() {
+	cards := []types.Card{
 	{
 		Balance: 1_000_00,
+		Active: true,
+ 	},
+	{
+		Balance: 3_000_00,
+		Active: true,
+	},
+	{
+		Balance: -1_000_00,
 		Active: true,
 	},
 	{
 		Balance: 2_000_00,
 		Active: true,
 	},
-}))
-fmt.Println(PaymentSources( []types.Card{
 	{
-		Balance: 1_000_00,
+		Balance: 10_000_00,
 		Active: false,
 	},
-}))
-
-	fmt.Println(PaymentSources( []types.Card{
-		{
-			Balance: -1_000_00,
-			Active: true,
-		},
-	}))
-	
+  }
+   fmt.Println(PaymentSources(cards))
    //Output: 
    //100000
    //300000
-   //0
-   //0
+   //200000
 }
