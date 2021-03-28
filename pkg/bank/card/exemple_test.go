@@ -7,26 +7,22 @@ import (
 
 
 func ExemplePaymentSources() {
-	fmt.Println(PaymentSources( []types.Card{
+	payments := [] types.Card{
 		{
 			Balance: 1_000_00,
 			Active: true,
- 		},
-	}))
-	
-fmt.Println(PaymentSources( []types.Card{
-	{
-		Balance: 1_000_00,
-		Active: false,
-	},
-}))
-
-	fmt.Println(PaymentSources( []types.Card{
+		},
+		{ 
+			Balance: 1_000_00,
+			Active: false,
+		},
 		{
 			Balance: -1_000_00,
-			Active: true,
+		    Active: true,
 		},
-	}))
-   //Output: 
-   //5555 6666 7777 8878(100000 TJS)
+    }
+
+	sources:= PaymentSources(payments)
+	fmt.Println(sources)
+	//Output: 2
 }
